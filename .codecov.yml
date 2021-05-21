@@ -1,4 +1,6 @@
 codecov:
+  # Use the yaml from a specific branch.
+  strict_yaml_branch: master
   # Don't wait for all other statuses to pass.
   require_ci_to_pass: false
 
@@ -27,7 +29,8 @@ coverage:
       # Show a status for the unit tests.
       tests:
         paths:
-          - "tests/nosetests"
+          - "tests/nosetests/"
+        informational: true
 
 # Disable the pull request comment.
 comment: false
